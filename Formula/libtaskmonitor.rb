@@ -11,10 +11,10 @@ class Libtaskmonitor < Formula
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    system "make", "-C", "build", "install"
+    system "cmake", "--install", "build"
   end
 
   test do
-    system "true"
+    system "false"
   end
 end
